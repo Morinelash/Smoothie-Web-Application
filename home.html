@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RenBel Smoothies</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS for the video background */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .about {
+            position: relative;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* White with 70% opacity */
+            border-radius: 10px;
+        }
+        /* CSS for the contact form */
+        .contact-form {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
+            border-radius: 10px;
+            color: white; /* Set font color to white */
+        }
+        .contact-form label {
+            color: white; /* Set label color to white */
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: white; /* Set input field color to white */
+            background-color: rgba(0, 0, 0, 0.3); /* Adjust input field background color */
+        }
+        .contact-form textarea {
+            height: 100px;
+        }
+        .contact-form input[type="submit"],
+        .contact-form .cta-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form input[type="submit"]:hover,
+        .contact-form .cta-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background video -->
+    <video id="bg-video" autoplay muted loop>
+        <source src="/Users/omorinsolalasekan/Downloads/Real Smoothie Video.mp4" type="video/mp4">
+        <!-- Add additional source elements for different video formats if needed -->
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Background audio -->
+    <audio autoplay loop>
+        <source src="/Users/omorinsolalasekan/Downloads/sedative-110241.mp3" type="audio/mpeg">
+        <!-- Add additional source elements for different audio formats if needed -->
+        Your browser does not support the audio tag.
+    </audio>
+
+    <header>
+        <h1>Welcome to RenBel Smoothies with Love!</h1>
+        <p>Fresh, delicious and healthy smoothies delivered to your doorstep.</p>
+        <a href="file:///Users/omorinsolalasekan/Belove's%20Smoothie%20website/Menupage.html" class="btn">View Menu</a>
+    </header>
+
+    <main>
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Welcome to RenBel Smoothies, where each sip tells a story of freshness and flavor. Nestled in the heart of Dublin, our passion for crafting vibrant and wholesome smoothies knows no bounds. With locally sourced ingredients and a commitment to excellence, we blend health and happiness into every delicious blend. Join us on a journey of taste and vitality, one sip at a time. </p>
+        </section>
+
+        <section class="gallery">
+            <h2>Our Smoothies</h2>
+            <div class="smoothie-img">
+                <figure>
+                    <img src="/Users/omorinsolalasekan/Downloads/Green apple smoothie with Yoghurt.jpeg" alt="Smoothie 1">
+                    <figcaption>Green Apple Bliss Smoothies </figcaption>
+                </figure>
+                <figure>
+                    <img src="/Users/omorinsolalasekan/Downloads/Apple Smoothies with Yoghurt.jpeg" alt="Smoothie 2">
+                    <figcaption>Red Apple Bliss Smoothies</figcaption>
+                </figure>
+                <figure>
+                    <img src="/Users/omorinsolalasekan/Downloads/Grape Banana Smoothie.jpeg" alt="Smoothie 3">
+                    <figcaption>Grape Blast Smoothies</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Contact form -->
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="file:///Users/omorinsolalasekan/Belove's%20Smoothie%20website/contact_thank_you.html" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+            
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject">
+                    <option value="general">General Inquiry</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="partnership">Partnership Opportunity</option>
+                    <!-- Add more options if needed -->
+                </select>
+            
+                <label for="message">Message/Comments:</label>
+                <textarea id="message" name="message" required></textarea>
+            
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location">
+            
+                <label for="contact-method">Preferred Contact Method:</label><br>
+                <input type="checkbox" id="email-contact" name="contact-method" value="email">
+                <label for="email-contact">Email</label>
+                <input type="checkbox" id="phone-contact" name="contact-method" value="phone">
+                <label for="phone-contact">Phone</label>
+                <input type="checkbox" id="no-preference" name="contact-method" value="no-preference">
+                <label for="no-preference">No Preference</label><br>
+            
+                <input type="submit" value="Submit">
+            </form>
+            

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RenBel Smoothies - Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your CSS styles here */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 18px;
+            margin-top: 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #555;
+        }
+        
+        main {
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Style for the video */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+     <!-- Background Video -->
+     <video id="bg-video" autoplay muted loop>
+        <source src="/Users/omorinsolalasekan/Downloads/Smoothie Video.mp4" type="video/mp4"> <!-- Replace "background_video.mp4" with your video file path -->
+        Your browser does not support the video tag.
+    </video>
+
+
+    <header>
+        <h1>RenBel Smoothies Menu</h1>
+        <p>Choose your favorite smoothies and customize them to your taste!</p>
+        <a href="home.html" class="btn">Back to Home</a> <!-- Updated link to home page -->
+    </header>
+
+    <main>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <section class="menu-item">
+                    <h2>Green Apple Bliss Smoothie</h2>
+                    <div class="product-image" style="background-image: url('/Users/omorinsolalasekan/Downloads/Green apple smoothie with Yoghurt.jpeg');"></div> <!-- Updated image path -->
+                    <p>Price: $5.99</p>
+                    <p>Customize Ingredients:</p>
+                    <ul>
+                        <li>Choose base: Yogurt / Almond Milk / Coconut Water</li>
+                        <li>Add extras: Spinach / Kale / Chia Seeds</li>
+                    </ul>
+                    <button class="add-to-cart" data-price="5.99">Add to Cart</button>
+                </section>
+            </div>
+
+            <!-- Add more slides here -->
+            <div class="mySlides fade">
+                <section class="menu-item">
+                    <h2>Strawberry Blast Smoothie</h2>
+                    <div class="product-image" style="background-image: url('/Users/omorinsolalasekan/Downloads/Strawberry Blast.jpeg');"></div>
+                    <p>Price: $6.49</p>
+                    <p>Customize Ingredients:</p>
+                    <ul>
+                        <li>Choose base: Yogurt / Soy Milk / Orange Juice</li>
+                        <li>Add extras: Protein Powder / Flaxseed / Honey</li>
+                    </ul>
+                    <button class="add-to-cart" data-price="6.49">Add to Cart</button>
+                </section>
+            </div>
+
+            <!-- Add more slides here -->
+            <div class="mySlides fade">
+                <section class="menu-item">
+                    <h2>Grape Blast Smoothie</h2>
+                    <div class="product-image" style="background-image: url('/Users/omorinsolalasekan/Downloads/Grape Banana Smoothie.jpeg');"></div>
+                    <p>Price: $6.29</p>
+                    <p>Customize Ingredients:</p>
+                    <ul>
+                        <li>Choose base: Yogurt / Soy Milk / Orange Juice</li>
+                        <li>Add extras: Protein Powder / Flaxseed / Honey</li>
+                    </ul>
+                    <button class="add-to-cart" data-price="6.49">Add to Cart</button>
+                </section>
+            </div>
+        </div>
+
+        <!-- Navigation arrows -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 RenBel Smoothies</p>
+    </footer>
+
+    <script src="menu.js"></script>
+
+    <script>
+        // JavaScript for slideshow functionality
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+    </script>
+</body>
+</html>
